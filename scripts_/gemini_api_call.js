@@ -15,9 +15,8 @@ export async function gemini_api_call(user_query) {
         contents: user_query,
     });
    
-    const text =
-    response.candidates?.[0]?.content?.parts?.[0]?.text
-    ?? 'Sorry, no answer returned.';
+    const text = response.candidates?.[0]?.content?.parts?.[0]?.text
+    ?? 'No answer returned.';
 
     return text;
 }
